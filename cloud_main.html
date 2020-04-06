@@ -1,75 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" lang="RU">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cloudberry</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="style/cloud_main.css">
-    </head>
-    <body>
-        <div class="container">
-            <header class="page-header" id='header'>
-                <div class="page-header__logo">
-                    <a href="/cloud_main.html">
-                        <img src="style/pics/logo2.png" alt="cloudberry">
-                    </a>
-                </div>
-            </header>
-            <div class="wrapper">
-                <nav class="menu" id='main-menu'>
-                    <button class="menu-toggle" id='menu-toggle'>
-                        Свернуть меню
-                    </button>
-                    <div class="menu-dropdown">
-                        <ul class="nav-menu">
-                            <li><a href="/new.html">Новинки</a></li>
-                            <li><a href="/catalog.html">Каталог</a></li>
-                            <li><a href="/gallery.html">Фото работ</a></li>
-                            <li><a href="/dealers.html">Где приобрести</a></li>
-                            <li><a href="/about.html">О нас</a></li>
-                            <li><a href="/feedback.html">Обратная связь</a></li>
-                            <li><a href="/reviews.html">Отзывы</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <main class="main">
-                    <div class="topic">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, non aliquid autem facilis sunt eos adipisci obcaecati cumque rem sit rerum hic alias minus et officia in quasi voluptas deserunt.
-                        Nostrum, numquam rerum velit fugit obcaecati reprehenderit perferendis debitis, blanditiis maxime id quae cum eveniet laudantium? Iusto, sapiente officia maiores tempore nesciunt, sint cupiditate porro soluta possimus rerum velit. Veritatis?
-                        Provident temporibus at neque? Nisi minus fugiat iusto laudantium porro a molestiae voluptate deserunt eveniet voluptatem, quibusdam molestias sapiente facere hic nam laborum illo sit doloribus consectetur reiciendis aliquam eum!
-                        Eos, laborum sint. Ipsum dolore fuga vel ducimus reiciendis dolor assumenda, unde quo, nisi voluptatem amet! Dolore a, fugiat excepturi mollitia doloremque eum accusamus! Recusandae suscipit deserunt non aperiam perferendis!
-                        Excepturi deleniti, consequuntur odit ut eligendi illo mollitia animi quam alias obcaecati, ipsam qui porro! Modi, cupiditate maxime? Nemo id ducimus voluptatem in voluptatibus non dicta iure eaque animi asperiores.
-                        Hic numquam perspiciatis rerum corporis voluptatibus nisi at autem, magnam molestias? Aspernatur, placeat aliquid tempore similique totam tempora sit distinctio voluptate illo, voluptatem autem aut, deserunt odio nemo. Neque, blanditiis.
-                        Sint dolore in placeat sunt sapiente sed et libero alias. Eos, quod dolor. Maxime voluptates, nesciunt architecto, est cum eum excepturi ut asperiores impedit sunt animi? Amet accusantium veritatis nostrum?
-                    </div>
-                    <aside class="foto" id='foto'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum laudantium tempore voluptas quam ratione dolorum in placeat et illum dicta vitae ullam impedit temporibus quas eveniet repellat, recusandae exercitationem modi.
-                        Est ea assumenda ab, esse hic fugiat ullam nemo earum iure reiciendis nisi saepe totam quod architecto perferendis asperiores sequi omnis dignissimos odio aliquid? Natus distinctio sunt ratione quos excepturi?
-                    </aside>
-                </main>
-            </div>
-            <!--<footer class="footer">
-                <ul class="footer-body">
-                    <li><a href="/vk.com">
-                        <img src="style/pics/vk.png" alt="VK"></a></li>
-                    <li><a href="/instagram.com">
-                        <img src="style/pics/instagram.png" alt="instagram"></a></li>
-                    <li><a href="/mail.ru">
-                        <img src="style/pics/email.png" alt="email"></a></li>
-                </ul>
-            </footer>-->
-        </div>
 
-        <script type="text/javascript">
-            (function(){
-                var button=document.getElementById('menu-toggle');
-                button.addEventListener('click',function(event){
-                    event.preventDefault();
-                    var menu=document.getElementById('main-menu');
-                    menu.classList.toggle('is-open');
-                });
-            })();
-        </script>
-    </body>
+<head>
+    <meta charset="utf-8" lang="RU">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cloudberry</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/cloud_main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="page-header">
+            <a href="/cloud_main.html">
+                <img src="pics/logo2.png" alt="cloudberry">
+            </a>
+        </header>
+
+        <div class="container">
+            <nav class="menu" id='main-menu'>
+                <button class="menu__toggle" id='menu-toggle'>
+                    Свернуть меню
+                </button>
+                <div class="menu__dropdown">
+                    <ul class="nav-menu">
+                        <li><a href="/new.html">Новинки</a></li>
+                        <li><a href="/catalog.html">Каталог</a></li>
+                        <li><a href="/gallery.html">Фото работ</a></li>
+                        <li><a href="/dealers.html">Где приобрести</a></li>
+                        <li><a href="/about.html">О нас</a></li>
+                        <li><a href="/feedback.html">Обратная связь</a></li>
+                        <li><a href="/reviews.html">Отзывы</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="main">
+                <div class="main__topic">
+                    <!--увеличенное фото из бокового слайдера-->
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, magnam! Illo dolores quisquam eveniet,
+                    eius odio vitae fugit pariatur accusamus.
+                </div>
+
+                <aside class="main__foto">
+                    <!--слайдер фото боковой-->
+                    <div class="main__slider">
+                        <div class="slider__item">
+                            <img src="pics/foto/1.jpg" alt=""></div>
+                        <!--<div class="slider__item">
+                            <img src="pics/foto/2.jpg" alt=""></div>
+                        <div class="slider__item">
+                            <img src="pics/foto/3.jpg" alt=""></div>
+                        <div class="slider__item">
+                            <img src="pics/foto/4.jpg" alt=""></div>
+                        <div class="slider__item">
+                            <img src="pics/foto/5.jpg" alt=""></div>-->
+                    </div>
+                </aside>
+            </main>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <ul class="footer__body">
+            <li><a href="/vk.com">
+                    <img src="pics/vk.png" alt="VK"></a></li>
+            <li><a href="/instagram.com">
+                    <img src="pics/instagram.png" alt="instagram"></a></li>
+            <li><a href="/mail.ru">
+                    <img src="pics/email.png" alt="email"></a></li>
+        </ul>
+    </footer>
+    <!--подключение JS, JQ-->
+    <!--
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="JScripts/slick.min.js"></script>
+    <script type="text/javascript" src="JScripts/script.js"></script>-->
+    <!--скрипт кнопки меню-->
+    <script type="text/javascript">
+        (function () {
+            var button = document.getElementById('menu-toggle');
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+                var menu = document.getElementById('main-menu');
+                menu.classList.toggle('is-open');
+            });
+        })();
+    </script>
+</body>
+
 </html>
