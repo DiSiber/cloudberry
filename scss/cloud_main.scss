@@ -1,0 +1,214 @@
+@font-face {
+    font-family: Stemle;
+    src: url(../fonts/10801.otf);
+    font-family: Alexandra;
+    src: url(../fonts/4236.ttf)
+}
+$b_col: rgb(253,241,242);
+$but_col: rgb(218,255,225)
+:root {
+    box-sizing: border-box;
+    font-size: calc(1vw+.6em);
+}
+@media (max-width: 50em){
+    :root {
+        font-size: 1.25em;
+    }
+}
+*, ::after,::before {
+    box-sizing: inherit;
+}
+body {
+    height: 100%;
+    background-color: $b_col;
+    max-width: 1300px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 3rem);
+    background: url(../pics/berry_2.png);
+}
+.page-header {
+    padding: 1.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0, $b_col,white,pink);
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        width: 40%;
+        height: auto;
+    }
+    @media (max-width:50em){
+        img{
+            width: 80%;
+        }
+    }
+    @media (max-width:35em){
+        img{
+            width: 100%;
+            padding: 0 .5em;
+        }
+    }
+}
+.container {
+    display: flex;
+}
+a{
+    &:link {
+        color: #ce8376;
+        font-weight: bold;
+        text-decoration: none;
+        }
+    &:visited {
+        color: #1430b8;
+        }
+    &:hover {
+        text-decoration: underline;
+        }
+    &:active {
+        color: #b81414;;
+        }
+}
+.menu {
+    position: relative;
+		&__toggle {
+            position: absolute;
+            top: -0.5em;
+            border: 0;
+            background-color: transparent;
+            font-size: 3em;
+            width: 1em;
+            height: 1em;
+            line-height: 0.4em;
+            text-indent: 5em;
+            white-space: nowrap;
+            overflow: hidden;
+            &::after{
+                position: absolute;
+                top: 0.2em;
+                left: 0.2em;
+                display: block;
+                content: "\2261";
+                text-indent: 0;
+            }
+        }
+		&__dropdown {
+            display: none;
+            position: absolute;
+            top: 0.8em;
+            left: 0.1em;
+        }
+        @media (min-width: 35em){
+            &__toggle{
+                display: none;
+            }
+            &__dropdown {
+                display: block;
+                position: static;
+            }
+        }
+        &.is-open &__dropdown{
+            display: block;
+        }
+}
+.nav-menu {
+    padding: 0 1em;
+    margin: 0;
+    list-style-type: none;
+    background: linear-gradient(left, $but_col,white);
+    border-radius: .5em;
+    color: #ffffff;
+    >li+li{
+        border-top: 1px solid pink;
+    }
+    >li{
+        >a{
+            display: block;
+            line-height: 2em;
+            padding: 0.8em 1em;
+            color: #000000;
+            font-style: italic;
+        }
+    }
+    @media (min-width:35em){
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5em;
+        margin-left: 1.5em;
+        border: 1px solid #000;
+        padding: 0 1em;
+        >li{
+            flex:1;
+        }
+        >li{
+            >a{
+                padding: 0.3em;
+                text-align: center;
+            }
+        }
+    }
+}
+.main {
+    margin-top: .5em;
+    display: flex;
+    padding: 1em 1.5em 0;
+		&__topic {
+            display: flex;
+            flex:3;
+		}
+		&__foto {
+            img{
+                width: 200px;
+                height: auto;
+            }
+            padding-left: 1.5em;
+            display: flex;
+            flex: 1;
+        }
+    @media (max-width: 50em){
+        &__foto{
+            display: none;
+        }
+    }
+}
+.footer {
+    height: 48px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $but_col;
+    border-radius: .4em;
+    background: linear-gradient(0, $b_col,white,$b_col);
+    &__body {
+        margin: 0;
+        padding: .5em 0;
+        display: flex;
+        flex-basis: 30%;
+        list-style-type: none;
+        align-items: center;
+        justify-content: space-around;
+        li>a{
+            display: block;
+        }
+        img{
+            vertical-align: middle;
+            height: 2rem;
+            width: auto
+        }
+    }
+    @media (max-width: 50em){
+        height: calc(48px + .5em);
+        &__body{
+            flex-basis: 80%;
+        }
+    }
+}
