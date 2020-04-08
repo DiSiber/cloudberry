@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="utf-8" lang="RU">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+        minimum-scale=1, maximum-scale=1">
     <title>Cloudberry</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/cloud_main.css">
+    
 </head>
 
 <body>
@@ -16,7 +19,7 @@
                 <img src="pics/logo2.png" alt="cloudberry">
             </a>
         </header>
-
+        <!--<h3>Искра для Вашего вдохновения!</h3>-->
         <div class="container">
             <nav class="menu" id='main-menu'>
                 <button class="menu__toggle" id='menu-toggle'>
@@ -34,29 +37,30 @@
                     </ul>
                 </div>
             </nav>
-
             <main class="main">
-                <div class="main__topic">
-                    <!--увеличенное фото из бокового слайдера-->
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, magnam! Illo dolores quisquam eveniet,
-                    eius odio vitae fugit pariatur accusamus.
-                </div>
-
-                <aside class="main__foto">
-                    <!--слайдер фото боковой-->
-                    <div class="main__slider">
-                        <div class="slider__item">
-                            <img src="pics/foto/1.jpg" alt=""></div>
-                        <!--<div class="slider__item">
-                            <img src="pics/foto/2.jpg" alt=""></div>
-                        <div class="slider__item">
-                            <img src="pics/foto/3.jpg" alt=""></div>
-                        <div class="slider__item">
-                            <img src="pics/foto/4.jpg" alt=""></div>
-                        <div class="slider__item">
-                            <img src="pics/foto/5.jpg" alt=""></div>-->
+                <div class="main__container">
+                    <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url(pics/small/1.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(pics/small/2.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(pics/small/3.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(pics/small/4.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(pics/small/5.jpg)"></div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next swiper-button-white"></div>
+                        <div class="swiper-button-prev swiper-button-white"></div>
                     </div>
-                </aside>
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url(pics/small/1.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(pics/small/2.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(pics/small/3.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(pics/small/4.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(pics/small/5.jpg)"></div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
@@ -70,12 +74,10 @@
             <li><a href="/mail.ru">
                     <img src="pics/email.png" alt="email"></a></li>
         </ul>
+        <span class="footer__copy">
+            <a href="//vk.com/cloudberry24">&copy; "Cloudberry"</a> - яГОДНАЯ магия!
+        </span>
     </footer>
-    <!--подключение JS, JQ-->
-    <!--
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="JScripts/slick.min.js"></script>
-    <script type="text/javascript" src="JScripts/script.js"></script>-->
     <!--скрипт кнопки меню-->
     <script type="text/javascript">
         (function () {
@@ -87,6 +89,38 @@
             });
         })();
     </script>
+
+    <script src="js/swiper.min.js"></script>
+    <script>
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 0,
+            slidesPerView: 2.1,
+            loop: true,
+            freeMode: true,
+            loopedSlides: 3, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 3, //looped slides should be the same
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs,
+            },
+            effect: "fade",
+            autoplay:{
+                delay:2500,
+                disableOnInteraction: false
+            }
+        });
+    </script>
+
 </body>
 
 </html>
